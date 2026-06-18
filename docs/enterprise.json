@@ -100,6 +100,8 @@
     "developer": "Zenity",
     "category": "Posture",
     "stage": "startup",
+    "funding": "$38M",
+    "round": "Series B",
     "description": "Agentic AI security posture management (AISPM); step-level MCP context inspection.",
     "url": "https://zenity.io"
   },
@@ -108,6 +110,8 @@
     "developer": "Straiker",
     "category": "Posture",
     "stage": "startup",
+    "funding": "$21M",
+    "round": "Seed",
     "description": "AI-native agentic security: Discover (inventory + MCP-vuln DB), Ascend (red team), Defend (runtime).",
     "url": "https://www.straiker.ai"
   },
@@ -116,6 +120,8 @@
     "developer": "Noma Security",
     "category": "Posture",
     "stage": "startup",
+    "funding": "$100M",
+    "round": "Series B",
     "description": "AISPM + Agent Access Control: discover/govern agents & MCP servers; real-time injection/exfil detection.",
     "url": "https://noma.security"
   },
@@ -124,6 +130,8 @@
     "developer": "NeuralTrust",
     "category": "Posture",
     "stage": "startup",
+    "funding": "$20M",
+    "round": "Series A",
     "description": "TrustGate (gateway), TrustGuard (runtime), TrustLens (posture). Raised $20M; EU-heavy (Iberia, Banc Sabadell).",
     "url": "https://neuraltrust.ai"
   },
@@ -132,6 +140,8 @@
     "developer": "TrojAI",
     "category": "Posture",
     "stage": "startup",
+    "funding": "$9.1M",
+    "round": "Seed",
     "description": "Defend for MCP — monitors traffic to/from MCP servers with runtime enforcement; blocks rogue servers.",
     "url": "https://www.troj.ai"
   },
@@ -140,6 +150,8 @@
     "developer": "General Analysis",
     "category": "Posture",
     "stage": "startup",
+    "funding": "$10M",
+    "round": "Seed",
     "description": "Automated agentic red-teaming / exploitability (maps tool graph, tests MCP abuse). Free GA Guard classifiers (OSS).",
     "url": "https://generalanalysis.com"
   },
@@ -148,6 +160,8 @@
     "developer": "Lasso Security",
     "category": "Runtime",
     "stage": "startup",
+    "funding": "$28M",
+    "round": "Series A+",
     "description": "Real-time prompt-injection blocking, PII masking, MCP tool reputation scoring.",
     "url": "https://www.lasso.security"
   },
@@ -156,6 +170,8 @@
     "developer": "Operant AI",
     "category": "Runtime",
     "stage": "startup",
+    "funding": "$13.5M",
+    "round": "Series A",
     "description": "MCP gateway w/ runtime protection + NHI security; free 2026 Guide to Securing MCP and Shadow Escape research.",
     "url": "https://www.operant.ai"
   },
@@ -180,6 +196,8 @@
     "developer": "TrueFoundry",
     "category": "Gateway",
     "stage": "startup",
+    "funding": "$19M",
+    "round": "Series A",
     "description": "MCP gateway / control plane: OAuth identity injection, per-tool RBAC, immutable audit logs.",
     "url": "https://www.truefoundry.com"
   },
@@ -188,6 +206,8 @@
     "developer": "Runlayer",
     "category": "Gateway",
     "stage": "startup",
+    "funding": "$11M",
+    "round": "Seed",
     "description": "Access control + rate-limiting for high-volume agent orchestration at scale.",
     "url": "https://www.runlayer.com"
   },
@@ -212,6 +232,8 @@
     "developer": "Helmet Security",
     "category": "Gateway",
     "stage": "startup",
+    "funding": "$9M",
+    "round": "Seed",
     "description": "End-to-end MCP lifecycle protection.",
     "url": "https://www.helmet.security"
   },
@@ -236,6 +258,8 @@
     "developer": "Backslash",
     "category": "Scanner",
     "stage": "startup",
+    "funding": "$19M",
+    "round": "Series A",
     "description": "MCP scanning, hardening, real-time MCP proxy for IDE / 'vibe coding' workflows.",
     "url": "https://www.backslash.security"
   },

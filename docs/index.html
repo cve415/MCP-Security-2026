@@ -171,6 +171,7 @@ nav {
 .stage-startup { background: #e6f3ff; color: #0066cc; }
 .stage-established { background: #e6e6e6; color: #333333; }
 .stage-body { background: #f0f0f0; color: #555555; }
+.funding-badge { font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.4rem; background: #fff3cd; color: #856404; border-radius: 3px; border: 1px solid #ffeaa7; }
 .card-link { font-size: 0.85rem; text-decoration: none; color: var(--text); font-weight: 600; white-space: nowrap; }
 .card-link:hover { text-decoration: underline; }
 
@@ -284,6 +285,11 @@ function renderGrid(filterText = '') {
             stageBadgeHTML = `<span class="stage-badge ${stageClass}">${stageEmoji} ${stageLabel}</span>`;
         }
 
+        let fundingBadgeHTML = '';
+        if (item.funding && item.round) {
+            fundingBadgeHTML = `<span class="funding-badge">${item.funding} ${item.round}</span>`;
+        }
+
         card.innerHTML = `
             <div>
                 <div class="card-subtitle">${subtitle}</div>
@@ -294,6 +300,7 @@ function renderGrid(filterText = '') {
                 <div class="card-badges">
                     <span class="category-badge">${metaTag}</span>
                     ${stageBadgeHTML}
+                    ${fundingBadgeHTML}
                 </div>
                 ${linkHTML}
             </div>
