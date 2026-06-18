@@ -2,49 +2,43 @@
   {
     "name": "Agentic AI Foundation / MCP",
     "type": "Standards Body",
+    "stage": "body",
     "description": "Neutral home for the Model Context Protocol under the Linux Foundation. Sets the protocol roadmap, registry direction, and conformance expectations for the ecosystem.",
     "url": "https://aaif.io"
   },
   {
     "name": "OWASP GenAI Security Project",
     "type": "Framework",
+    "stage": "body",
     "description": "MCP Top 10 plus Agentic Top 10 for 2026. The most operationally referenced free security framework for solo devs and enterprise teams alike.",
     "url": "https://genai.owasp.org"
   },
   {
     "name": "Cloud Security Alliance",
     "type": "Standards Body",
+    "stage": "body",
     "description": "GenAI governance, shadow-AI visibility, and the CSA Agentic MCP Security Best Practices guide for enterprise practitioners.",
     "url": "https://cloudsecurityalliance.org"
   },
   {
     "name": "CoSAI",
     "type": "Industry Coalition",
+    "stage": "body",
     "description": "Coalition for Secure AI under OASIS — industry working group producing secure-AI frameworks and cross-vendor alignment.",
     "url": "https://www.coalitionforsecureai.org"
   },
   {
     "name": "NIST CAISI AI Agent Standards Initiative",
     "type": "Standards Body",
-    "description": "NIST's AI Agent Standards Initiative — the threat-model and standards backbone for federal and regulated-industry adoption.",
-    "url": "https://www.nist.gov/artificial-intelligence"
+    "stage": "body",
+    "description": "NIST's AI Agent Standards Initiative (launched Feb 17, 2026) — the threat-model and standards backbone for federal and regulated-industry adoption.",
+    "url": "https://www.nist.gov/caisi"
   },
   {
     "name": "MITRE ATLAS",
     "type": "Threat Model",
+    "stage": "body",
     "description": "Adversarial Threat Landscape for AI Systems. v5.4.0 added MCP/A2A-specific techniques — essential for red-team and SOC alignment.",
     "url": "https://atlas.mitre.org"
-  },
-  {
-    "name": "CSA Agentic MCP Security Best Practices",
-    "type": "Guide",
-    "description": "Structured framework covering six MCP threat categories, a four-level maturity model, and mappings to OWASP ASI, AICM, and MITRE ATLAS.",
-    "url": "https://labs.cloudsecurityalliance.org/agentic/agentic-mcp-security-best-practices-v1/"
-  },
-  {
-    "name": "EU AI Act",
-    "type": "Regulation",
-    "description": "European Union AI Act compliance requirements increasingly referenced in MCP governance programs — especially audit trails and human oversight.",
-    "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
   }
 ]

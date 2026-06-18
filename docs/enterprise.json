@@ -1,142 +1,250 @@
 [
   {
-    "name": "Lasso Security",
-    "developer": "Lasso Security",
-    "category": "Runtime",
-    "description": "MCP red-teaming platform and threat intelligence for agentic AI. Covers prompt injection detection, tool abuse scenarios, and MCP-specific attack surface mapping — enterprise-grade research backed by a commercial runtime security offering.",
-    "url": "https://www.lasso.security"
-  },
-  {
     "name": "Zscaler",
     "developer": "Zscaler",
     "category": "Network",
-    "description": "AI Broker + Agent Registry broker MCP and agent-to-agent (A2A) traffic at the network control plane; added AI red-teaming for MCP servers. The clearest network-level leader.",
+    "stage": "established",
+    "description": "AI Broker + Agent Registry broker MCP and agent-to-agent (A2A) traffic at the network control plane; added AI red-teaming for MCP servers.",
     "url": "https://www.zscaler.com"
   },
   {
     "name": "Palo Alto Networks",
     "developer": "Palo Alto Networks",
     "category": "Network + Identity",
-    "description": "Prisma AIRS for runtime AI security, plus Idira (built on its CyberArk acquisition) for agentic identity. Network + identity in one stack.",
+    "stage": "established",
+    "description": "Prisma AIRS for runtime AI security, plus Idira (built on its CyberArk acquisition) for agentic identity.",
     "url": "https://www.paloaltonetworks.com"
   },
   {
-    "name": "Zenity",
-    "developer": "Zenity",
-    "category": "Posture",
-    "description": "Agentic AI security posture management (AISPM) with MCP-aware governance and step-level context inspection. The pure-play posture leader.",
-    "url": "https://zenity.io"
+    "name": "Cisco AI Defense",
+    "developer": "Cisco",
+    "category": "Network",
+    "stage": "established",
+    "description": "Runtime protections against tool abuse and supply-chain manipulation at the MCP layer.",
+    "url": "https://www.cisco.com/site/us/en/products/security/ai-defense/index.html"
   },
   {
-    "name": "Salt Security",
-    "developer": "Salt Security",
-    "category": "Posture",
-    "description": "Agentic Security Platform mapping the Agentic Security Graph across LLMs, MCP servers, and APIs; strong on eliminating shadow MCP.",
-    "url": "https://salt.security/agentic-ai"
+    "name": "Cloudflare",
+    "developer": "Cloudflare",
+    "category": "Network",
+    "stage": "established",
+    "description": "MCP gateway / edge controls for agent traffic.",
+    "url": "https://www.cloudflare.com"
+  },
+  {
+    "name": "Akamai",
+    "developer": "Akamai",
+    "category": "Network",
+    "stage": "established",
+    "description": "Edge agentic-security framework: agent identity, traffic analysis, 'Know Your Agent.'",
+    "url": "https://www.akamai.com"
   },
   {
     "name": "CrowdStrike",
     "developer": "CrowdStrike",
     "category": "Identity",
-    "description": "Continuous Identity for AI Agents: cryptographically verifiable agent identity (SPIFFE), ownership preserved through sub-agent delegation, zero-standing-privilege.",
-    "url": "https://www.crowdstrike.com"
+    "stage": "established",
+    "description": "Falcon AIDR (GA Dec 2025): Maps users/prompts/models/agents/MCP servers; validates MCP comms via MCP proxy; Continuous Identity for Agents (SPIFFE).",
+    "url": "https://www.crowdstrike.com/en-us/platform/falcon-aidr-ai-detection-and-response/"
   },
   {
-    "name": "SailPoint (+ Entro)",
+    "name": "Microsoft Agent 365",
+    "developer": "Microsoft",
+    "category": "Identity",
+    "stage": "established",
+    "description": "Control plane + unified agent registry (GA 2026). Discovers agents & MCP servers; pairs with Entra Agent ID (identity) and Defender (MCP asset-context mapping from Jun 2026). Supersedes retired Entra 'Agent registry' blade.",
+    "url": "https://www.microsoft.com/en-us/microsoft-agent-365"
+  },
+  {
+    "name": "SailPoint",
     "developer": "SailPoint",
     "category": "Identity",
-    "description": "Agentic Fabric for agent and non-human identity governance; acquiring Tel Aviv's Entro for deep secrets discovery and NHI scanning.",
+    "stage": "established",
+    "description": "Agentic Fabric for agent and non-human identity governance; acquiring Entro (Tel Aviv) for deep secrets discovery and NHI scanning.",
     "url": "https://www.sailpoint.com"
+  },
+  {
+    "name": "Beyond Identity",
+    "developer": "Beyond Identity",
+    "category": "Identity",
+    "stage": "established",
+    "description": "Process/OS-level policy enforcement — controls which agents launch, restricts tools/scope, terminates violating sessions.",
+    "url": "https://www.beyondidentity.com"
+  },
+  {
+    "name": "Saviynt",
+    "developer": "Saviynt",
+    "category": "Identity",
+    "stage": "established",
+    "description": "Agent Access Gateway with Intent-Aware Runtime Authorization.",
+    "url": "https://saviynt.com"
+  },
+  {
+    "name": "Silverfort",
+    "developer": "Silverfort",
+    "category": "Identity",
+    "stage": "established",
+    "description": "Non-human / agent identity protection.",
+    "url": "https://www.silverfort.com"
+  },
+  {
+    "name": "BeyondTrust",
+    "developer": "BeyondTrust",
+    "category": "Identity",
+    "stage": "established",
+    "description": "PathfinderAI + MCP Server for privilege-centric agent identity.",
+    "url": "https://www.beyondtrust.com"
+  },
+  {
+    "name": "Zenity",
+    "developer": "Zenity",
+    "category": "Posture",
+    "stage": "startup",
+    "description": "Agentic AI security posture management (AISPM); step-level MCP context inspection.",
+    "url": "https://zenity.io"
+  },
+  {
+    "name": "Straiker",
+    "developer": "Straiker",
+    "category": "Posture",
+    "stage": "startup",
+    "description": "AI-native agentic security: Discover (inventory + MCP-vuln DB), Ascend (red team), Defend (runtime).",
+    "url": "https://www.straiker.ai"
+  },
+  {
+    "name": "Noma Security",
+    "developer": "Noma Security",
+    "category": "Posture",
+    "stage": "startup",
+    "description": "AISPM + Agent Access Control: discover/govern agents & MCP servers; real-time injection/exfil detection.",
+    "url": "https://noma.security"
+  },
+  {
+    "name": "NeuralTrust",
+    "developer": "NeuralTrust",
+    "category": "Posture",
+    "stage": "startup",
+    "description": "TrustGate (gateway), TrustGuard (runtime), TrustLens (posture). Raised $20M; EU-heavy (Iberia, Banc Sabadell).",
+    "url": "https://neuraltrust.ai"
+  },
+  {
+    "name": "TrojAI",
+    "developer": "TrojAI",
+    "category": "Posture",
+    "stage": "startup",
+    "description": "Defend for MCP — monitors traffic to/from MCP servers with runtime enforcement; blocks rogue servers.",
+    "url": "https://www.troj.ai"
+  },
+  {
+    "name": "General Analysis",
+    "developer": "General Analysis",
+    "category": "Posture",
+    "stage": "startup",
+    "description": "Automated agentic red-teaming / exploitability (maps tool graph, tests MCP abuse). Free GA Guard classifiers (OSS).",
+    "url": "https://generalanalysis.com"
+  },
+  {
+    "name": "Lasso Security",
+    "developer": "Lasso Security",
+    "category": "Runtime",
+    "stage": "startup",
+    "description": "Real-time prompt-injection blocking, PII masking, MCP tool reputation scoring.",
+    "url": "https://www.lasso.security"
+  },
+  {
+    "name": "Operant AI",
+    "developer": "Operant AI",
+    "category": "Runtime",
+    "stage": "startup",
+    "description": "MCP gateway w/ runtime protection + NHI security; free 2026 Guide to Securing MCP and Shadow Escape research.",
+    "url": "https://www.operant.ai"
+  },
+  {
+    "name": "Cyera",
+    "developer": "Cyera",
+    "category": "Data Lineage",
+    "stage": "established",
+    "description": "Data security / lineage — what data agents and their tools actually touch (raised $600M, ~$12B val).",
+    "url": "https://www.cyera.com"
   },
   {
     "name": "MintMCP",
     "developer": "MintMCP",
     "category": "Gateway",
-    "description": "Enterprise MCP gateway: SSO, RBAC, and virtual MCP bundling. The managed gateway that deploys without infra overhead.",
+    "stage": "startup",
+    "description": "Enterprise MCP gateway: SSO, RBAC, virtual MCP bundling; managed, no infra overhead.",
     "url": "https://mintmcp.com"
   },
   {
     "name": "TrueFoundry",
     "developer": "TrueFoundry",
     "category": "Gateway",
-    "description": "MCP gateway / control plane enforcing OAuth identity injection, per-tool RBAC, and immutable audit logs across servers.",
+    "stage": "startup",
+    "description": "MCP gateway / control plane: OAuth identity injection, per-tool RBAC, immutable audit logs.",
     "url": "https://www.truefoundry.com"
-  },
-  {
-    "name": "Operant AI",
-    "developer": "Operant AI",
-    "category": "Gateway",
-    "description": "MCP gateway with runtime protection, identity-aware enforcement, and NHI security; also a leading source of MCP threat research.",
-    "url": "https://www.operant.ai"
   },
   {
     "name": "Runlayer",
     "developer": "Runlayer",
-    "category": "Orchestration",
-    "description": "Access control and rate-limiting purpose-built for high-volume agent orchestration at scale.",
+    "category": "Gateway",
+    "stage": "startup",
+    "description": "Access control + rate-limiting for high-volume agent orchestration at scale.",
     "url": "https://www.runlayer.com"
   },
   {
-    "name": "Cisco AI Defense",
-    "developer": "Cisco",
-    "category": "Network/Edge",
-    "description": "Network/edge AI defense layer for MCP and agent traffic. Honorable mention for enterprises with existing Cisco estates.",
-    "url": "https://www.cisco.com"
+    "name": "Lunar.dev MCPX",
+    "developer": "Lunar.dev",
+    "category": "Gateway",
+    "stage": "startup",
+    "description": "MCP observability, rate limiting, compliance.",
+    "url": "https://www.lunar.dev"
   },
   {
-    "name": "Cloudflare",
-    "developer": "Cloudflare",
-    "category": "Network/Edge",
-    "description": "Edge-level protection and observability for AI agent and MCP endpoints. Honorable mention for cloud-native teams.",
-    "url": "https://www.cloudflare.com"
+    "name": "MCP Manager",
+    "developer": "MCP Manager",
+    "category": "Gateway",
+    "stage": "startup",
+    "description": "MCP gateway with guardrails, RBAC, PII detection, centralized provisioning.",
+    "url": "https://mcpmanager.ai"
   },
   {
-    "name": "Akamai",
-    "developer": "Akamai",
-    "category": "Network/Edge",
-    "description": "Edge security and delivery controls applicable to MCP gateway deployments. Honorable mention for regulated industries.",
-    "url": "https://www.akamai.com"
+    "name": "Helmet Security",
+    "developer": "Helmet Security",
+    "category": "Gateway",
+    "stage": "startup",
+    "description": "End-to-end MCP lifecycle protection.",
+    "url": "https://www.helmet.security"
   },
   {
-    "name": "Beyond Identity (Ceros)",
-    "developer": "Beyond Identity",
-    "category": "Identity",
-    "description": "Passwordless identity and device trust for agentic workflows. Honorable mention in the identity layer.",
-    "url": "https://www.beyondidentity.com"
+    "name": "Manufact",
+    "developer": "Manufact",
+    "category": "Gateway",
+    "stage": "startup",
+    "description": "MCP infrastructure platform (YC-backed).",
+    "url": "https://www.manufact.ai"
   },
   {
-    "name": "Microsoft Entra Agent ID",
-    "developer": "Microsoft",
-    "category": "Identity",
-    "description": "Agent identity within the Microsoft ecosystem. Honorable mention for Entra-centric enterprises.",
-    "url": "https://www.microsoft.com/security"
-  },
-  {
-    "name": "Noma Security",
-    "developer": "Noma Security",
-    "category": "Runtime",
-    "description": "Runtime AI security and posture for agentic applications. Honorable mention in runtime/posture layer.",
-    "url": "https://noma.security"
-  },
-  {
-    "name": "Cyera",
-    "developer": "Cyera",
-    "category": "Data Lineage",
-    "description": "Data security posture and lineage for AI agent data flows. Honorable mention for data governance teams.",
-    "url": "https://www.cyera.io"
-  },
-  {
-    "name": "IBM MCP Gateway (ContextForge Enterprise)",
+    "name": "IBM ContextForge Enterprise",
     "developer": "IBM",
     "category": "Gateway",
-    "description": "Enterprise deployment of IBM ContextForge with managed support. Honorable mention bridging open source and enterprise.",
+    "stage": "established",
+    "description": "Enterprise deployment of IBM ContextForge with managed support.",
     "url": "https://github.com/IBM/mcp-context-forge"
   },
   {
-    "name": "Microsoft MCP Gateway",
-    "developer": "Microsoft",
-    "category": "Gateway",
-    "description": "Microsoft's MCP gateway for Azure and Copilot ecosystems. Honorable mention for Microsoft-first shops.",
-    "url": "https://www.microsoft.com"
+    "name": "Backslash Security",
+    "developer": "Backslash",
+    "category": "Scanner",
+    "stage": "startup",
+    "description": "MCP scanning, hardening, real-time MCP proxy for IDE / 'vibe coding' workflows.",
+    "url": "https://www.backslash.security"
+  },
+  {
+    "name": "GuardionAI",
+    "developer": "GuardionAI",
+    "category": "Runtime",
+    "stage": "startup",
+    "description": "Runtime guardrail + security gateway enforcing policy on MCP tool calls; app-layer (no network controls).",
+    "url": "https://guardion.ai"
   }
 ]

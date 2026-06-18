@@ -164,9 +164,14 @@ nav {
 .card-subtitle { font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.75rem; }
 .card-body { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.25rem; flex-grow: 1; }
 
-.card-meta { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+.card-meta { display: flex; justify-content: space-between; align-items: center; margin-top: auto; gap: 0.75rem; flex-wrap: wrap; }
+.card-badges { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
 .category-badge { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.5rem; background: var(--badge-bg); border-radius: 4px; }
-.card-link { font-size: 0.85rem; text-decoration: none; color: var(--text); font-weight: 600; }
+.stage-badge { font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.4rem; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px; }
+.stage-startup { background: #e6f3ff; color: #0066cc; }
+.stage-established { background: #e6e6e6; color: #333333; }
+.stage-body { background: #f0f0f0; color: #555555; }
+.card-link { font-size: 0.85rem; text-decoration: none; color: var(--text); font-weight: 600; white-space: nowrap; }
 .card-link:hover { text-decoration: underline; }
 
 .no-results { display: none; text-align: center; padding: 3rem; color: var(--text-secondary); }
@@ -266,10 +271,18 @@ function renderGrid(filterText = '') {
     items.forEach(item => {
         const card = document.createElement('div');
         card.className = 'card';
-        
+
         const subtitle = item.developer || item.category || item.type || 'Standard';
         const metaTag = item.category || item.type || 'Framework';
         const linkHTML = item.url ? `<a class="card-link" href="${item.url}" target="_blank">View ↗</a>` : '';
+
+        let stageBadgeHTML = '';
+        if (item.stage) {
+            const stageEmoji = { startup: '🚀', established: '🏛', body: '📋' }[item.stage] || '';
+            const stageClass = `stage-${item.stage}`;
+            const stageLabel = item.stage.charAt(0).toUpperCase() + item.stage.slice(1);
+            stageBadgeHTML = `<span class="stage-badge ${stageClass}">${stageEmoji} ${stageLabel}</span>`;
+        }
 
         card.innerHTML = `
             <div>
@@ -278,7 +291,10 @@ function renderGrid(filterText = '') {
                 <div class="card-body">${item.description}</div>
             </div>
             <div class="card-meta">
-                <span class="category-badge">${metaTag}</span>
+                <div class="card-badges">
+                    <span class="category-badge">${metaTag}</span>
+                    ${stageBadgeHTML}
+                </div>
                 ${linkHTML}
             </div>
         `;

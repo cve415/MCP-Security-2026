@@ -3,6 +3,7 @@
     "name": "Model Context Protocol + MCP Registry",
     "developer": "Agentic AI Foundation",
     "category": "Protocol",
+    "stage": "body",
     "description": "The spec itself, now neutrally governed under the AAIF. Follow the Registry and the 2026 roadmap (Server Cards, conformance tests, SSO-based auth); it's the source of truth everything else builds on.",
     "url": "https://modelcontextprotocol.io"
   },
@@ -10,6 +11,7 @@
     "name": "mcp-scan",
     "developer": "Invariant Labs (Snyk)",
     "category": "Scanner",
+    "stage": "startup",
     "description": "The single highest-ROI tool here. Detects tool poisoning, rug pulls (hash-based tool pinning), and prompt injection across Claude Desktop, Cursor, Claude Code, Gemini CLI, and Windsurf. uvx mcp-scan@latest, no config, free.",
     "url": "https://github.com/invariantlabs-ai/mcp-scan"
   },
@@ -17,6 +19,7 @@
     "name": "OWASP GenAI Security Project",
     "developer": "OWASP",
     "category": "Framework",
+    "stage": "body",
     "description": "The free checklist you build against: the MCP Top 10 plus the Top 10 for Agentic Applications (2026). If you read one thing on this list, read this.",
     "url": "https://genai.owasp.org/initiatives/agentic-security-initiative/"
   },
@@ -24,6 +27,7 @@
     "name": "mcp-use",
     "developer": "mcp-use",
     "category": "Infrastructure",
+    "stage": "startup",
     "description": "Open-source infrastructure for secure MCP deployment: OAuth, multi-user auth, and context boundaries. Your auth layer for anything you ship.",
     "url": "https://github.com/mcp-use/mcp-use"
   },
@@ -31,6 +35,7 @@
     "name": "IBM ContextForge",
     "developer": "IBM",
     "category": "Gateway",
+    "stage": "established",
     "description": "Open-source, self-hostable MCP gateway. The free alternative to the paid enterprise gateways — worth standing up once you run more than one server.",
     "url": "https://github.com/IBM/mcp-context-forge"
   },
@@ -38,6 +43,7 @@
     "name": "Lunar.dev MCPX",
     "developer": "Lunar.dev",
     "category": "Observability",
+    "stage": "startup",
     "description": "MCP-focused observability, rate limiting, and compliance. Lightweight visibility into what your agents are actually calling.",
     "url": "https://www.lunar.dev"
   },
@@ -45,6 +51,7 @@
     "name": "Backslash Security",
     "developer": "Backslash",
     "category": "Scanner",
+    "stage": "startup",
     "description": "MCP scanning, hardening, and a real-time MCP proxy built for IDE / vibe-coding workflows. Relevant if your dev loop is agent-heavy.",
     "url": "https://www.backslash.security"
   },
@@ -52,6 +59,7 @@
     "name": "Golf Scanner",
     "developer": "Open Source",
     "category": "Scanner",
+    "stage": "startup",
     "description": "Open-source Go CLI; discovers MCP server configs across ~7 IDEs and runs ~20 checks against local setups. Workstation hygiene.",
     "url": "https://github.com/golf-mcp/golf-scanner"
   },
@@ -59,6 +67,7 @@
     "name": "mcp-sec-audit",
     "developer": "Open Source",
     "category": "Auditor",
+    "stage": "startup",
     "description": "Static + dynamic analysis focused on over-privileged tool capabilities (scored 100% on the MCPTox benchmark). Run it before you publish a server.",
     "url": "https://github.com/nyit-vancouver/mcp-sec-audit"
   },
@@ -66,7 +75,24 @@
     "name": "Lasso Security",
     "developer": "Lasso Security",
     "category": "Scanner",
+    "stage": "startup",
     "description": "MCP threat intelligence, red-teaming tooling, and agentic security research. Free-tier scanning and research resources make it a useful reference for solo devs hardening their setups.",
     "url": "https://www.lasso.security"
+  },
+  {
+    "name": "Operant AI",
+    "developer": "Operant AI",
+    "category": "Gateway",
+    "stage": "startup",
+    "description": "MCP gateway w/ runtime protection + NHI security; free 2026 Guide to Securing MCP and Shadow Escape research.",
+    "url": "https://www.operant.ai"
+  },
+  {
+    "name": "Unified Context Layer (UCL)",
+    "developer": "Open Source",
+    "category": "Gateway",
+    "stage": "startup",
+    "description": "Emerging open context/MCP gateway layer for agentic systems; useful as your local setup grows past a single client.",
+    "url": "https://modelcontextprotocol.io"
   }
 ]
