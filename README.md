@@ -1,60 +1,57 @@
-# MCP & Agentic Security in 2026: The Top 10 for Solo Devs vs. the Top 10 for Enterprise
+# MCP & Agentic Security Directory (2026)
 
-MCP went from experiment to critical infrastructure in about 16 months — and in December 2025 it moved under the **[Agentic AI Foundation](https://aaif.io)** (a Linux Foundation fund) alongside a security ecosystem that barely existed a year ago. But "who are the leaders" is the wrong question, because a solo developer and a Fortune 500 security team are buying completely different things.
+An open index mapping the security infrastructure landscape for the Model Context Protocol ecosystem — categorized by developer tooling, enterprise control planes, and governance frameworks.
 
----
-
-## Top 10 for Developers
-*Free / open-source / self-serve. Start at the top.*
-
-1. **[Model Context Protocol + the MCP Registry](https://modelcontextprotocol.io)** — The spec itself, now neutrally governed under the AAIF. Follow the Registry and the 2026 roadmap (Server Cards, conformance tests, SSO-based auth); it's the source of truth everything else builds on.
-2. **[mcp-scan](https://github.com/invariantlabs-ai/mcp-scan)** (Invariant Labs, now Snyk) — The single highest-ROI tool here. Detects tool poisoning, rug pulls (hash-based tool pinning), and prompt injection across Claude Desktop, Cursor, Claude Code, Gemini CLI, and Windsurf. `uvx mcp-scan@latest`, no config, free.
-3. **[OWASP GenAI Security Project](https://genai.owasp.org/initiatives/agentic-security-initiative/)** — The free checklist you build against: the **MCP Top 10** plus the **Top 10 for Agentic Applications (2026)**. If you read one thing on this list, read this.
-4. **[mcp-use](https://github.com/mcp-use/mcp-use)** — Open-source infrastructure for secure MCP deployment: OAuth, multi-user auth, and context boundaries. Your auth layer for anything you ship.
-5. **[IBM ContextForge](https://github.com/IBM/mcp-context-forge)** — Open-source, self-hostable MCP gateway. The free alternative to the paid enterprise gateways below — worth standing up once you run more than one server.
-6. **[Lunar.dev — MCPX](https://www.lunar.dev)** — MCP-focused observability, rate limiting, and compliance. Lightweight visibility into what your agents are actually calling.
-7. **[Backslash Security](https://www.backslash.security)** — MCP scanning, hardening, and a real-time MCP proxy built for IDE / "vibe coding" workflows. Relevant if your dev loop is agent-heavy.
-8. **Golf Scanner** — Open-source Go CLI; discovers MCP server configs across ~7 IDEs and runs ~20 checks against local setups. Workstation hygiene.
-9. **mcp-sec-audit** — Static + dynamic analysis focused on over-privileged tool capabilities (scored 100% on the MCPTox benchmark). Run it before you publish a server.
-10. **[Unified Context Layer (UCL)](https://modelcontextprotocol.io)** — Emerging open context/MCP gateway layer for agentic systems; useful as your local setup grows past a single client.
-
-**Honorable mentions:** Operant AI's free *2026 Guide to Securing MCP* (and its "Shadow Escape" research); MCP Manager's self-serve tier; Lasso Security's community MCP tooling.
-
-> **The unglamorous part:** the four moves that actually stop the early-2026 incidents aren't products — pin and review MCP package versions, block auto-approval on tool calls, rotate any plaintext keys in agent configs (`.claude/settings.json`, `~/.env`-style files), and never expose an MCP endpoint without auth.
+**Live site:** [cve415.github.io/MCP-Governance](https://cve415.github.io/MCP-Governance/)
 
 ---
 
-## Top 10 for the Enterprise Developer
-*Bought and governed by security/platform teams. Spanning network, identity, posture, and gateway layers.*
+## About this directory
 
-1. **[Zscaler](https://www.zscaler.com)** — AI Broker + Agent Registry broker MCP and agent-to-agent (A2A) traffic at the network control plane; added AI red-teaming for MCP servers. The clearest "network-level" leader.
-2. **[Palo Alto Networks](https://www.paloaltonetworks.com)** — Prisma AIRS for runtime AI security, plus **Idira** (built on its $25B CyberArk acquisition, closed Feb 2026) for agentic identity. Network + identity in one stack.
-3. **[Zenity](https://zenity.io)** — Agentic AI security posture management (AISPM) with MCP-aware governance and step-level context inspection. The pure-play posture leader.
-4. **[Salt Security](https://salt.security/agentic-ai)** — Agentic Security Platform mapping the "Agentic Security Graph" across LLMs, MCP servers, and APIs; strong on eliminating shadow MCP.
-5. **[CrowdStrike](https://www.crowdstrike.com)** — Continuous Identity for AI Agents: cryptographically verifiable agent identity (SPIFFE), ownership preserved through sub-agent delegation, zero-standing-privilege.
-6. **[SailPoint (+ Entro)](https://www.sailpoint.com)** — Agentic Fabric for agent and non-human identity governance; acquiring Tel Aviv's Entro for deep secrets discovery and NHI scanning.
-7. **[MintMCP](https://mintmcp.com)** — Enterprise MCP gateway: SSO, RBAC, and virtual MCP bundling. The managed gateway that deploys without infra overhead.
-8. **[TrueFoundry](https://www.truefoundry.com)** — MCP gateway / control plane enforcing OAuth identity injection, per-tool RBAC, and immutable audit logs across servers.
-9. **[Operant AI](https://www.operant.ai)** — MCP gateway with runtime protection, identity-aware enforcement, and NHI security; also a leading source of MCP threat research.
-10. **[Runlayer](https://www.runlayer.com)** — Access control and rate-limiting purpose-built for high-volume agent orchestration at scale.
+The Model Context Protocol went from an early experiment to foundational enterprise infrastructure in roughly 16 months. In December 2025, it moved under the **[Agentic AI Foundation](https://aaif.io)** alongside a security ecosystem that barely existed a year prior.
 
-**Honorable mentions (by layer):**
-- *Network/edge:* Cisco (AI Defense), Cloudflare, Akamai
-- *Identity:* Beyond Identity (Ceros), Microsoft Entra Agent ID, Saviynt, Silverfort, BeyondTrust
-- *Runtime/posture:* Noma Security, Straiker, Lasso Security
-- *Data lineage:* Cyera
-- *Gateways:* MCP Manager, IBM MCP Gateway (ContextForge enterprise), Microsoft MCP Gateway
+But "who are the leaders" is the wrong question—because a solo developer and a Fortune 500 security team are buying completely different things. This directory maps what actually exists and who needs it.
 
 ---
 
-## Standards & governance to track (not vendors, but they set the rules)
-- **[Agentic AI Foundation / MCP](https://aaif.io)** — neutral home for the protocol (Linux Foundation).
-- **[OWASP GenAI Security Project](https://genai.owasp.org)** — MCP Top 10 + Agentic Top 10; the most operationally referenced framework.
-- **[Cloud Security Alliance](https://cloudsecurityalliance.org)** — GenAI governance, shadow-AI visibility, and its MCP Security project.
-- **[CoSAI](https://www.coalitionforsecureai.org)** — industry working group under OASIS for secure-AI frameworks.
-- **NIST CAISI AI Agent Standards Initiative** and **MITRE ATLAS** (v5.4.0 added MCP/A2A-specific techniques) — the threat-model and standards backbone.
+## How to use
+
+The site has three tabs:
+
+- **For Developers** — Free, open-source, and self-serve tools. Start here if you're hardening a local workstation or shipping MCP infrastructure at the edge.
+- **Enterprise Platforms** — Vendor solutions bought and governed by security/platform teams. Spans network, identity, posture, runtime, and gateway layers.
+- **Standards & Governance** — Not vendors; frameworks and organizations that set the rules (OWASP, NIST, CSA, MITRE ATLAS, etc.).
+
+Search across all entries by name, description, developer, or category.
 
 ---
 
-*Methodology: integrated from a working leaders list plus independent research, verified against mid-June 2026 sources. Deduped: CSA's general and MCP-Security entries merged; IBM ContextForge = IBM MCP Gateway; Entro folded into SailPoint.*
+## Core workstation security best practices
 
+Regardless of which tools you choose:
+
+1. **Verify Supply Chain Integrity** — Pin all third-party MCP server package hashes and establish a cadence for reviewing them.
+2. **Mandate Explicit Authorization** — Disable automatic approvals for tools; require active user consent for any sensitive operations.
+3. **Secure Credential Management** — Replace plaintext credentials in configuration files with environment variables or secure secret managers; rotate all existing secrets.
+4. **Network Perimeter Control** — Never expose MCP endpoints to public networks; utilize strict authentication (e.g., mTLS, API keys) for all connections.
+
+---
+
+## Contributing
+
+This directory reflects mid-June 2026 sources and is actively maintained. 
+
+To suggest additions, corrections, or removals, [open an issue](https://github.com/cve415/MCP-Governance/issues) or [submit a PR](https://github.com/cve415/MCP-Governance/pulls).
+
+---
+
+## Data structure
+
+- `solo.json` — Developer tooling (open-source, free-tier, self-serve)
+- `enterprise.json` — Enterprise platforms and control planes
+- `governance.json` — Standards, frameworks, and governance bodies
+- `index.html` — Static site with client-side filtering and search
+
+---
+
+**By Christopher Velasco, Agent Architect**
