@@ -61,7 +61,7 @@
     "name": "Golf Scanner",
     "developer": "Open Source",
     "category": "Scanner",
-    "stage": "startup",
+    "stage": "body",
     "description": "Discover and audit MCP servers across your IDEs.",
     "url": "https://github.com/golf-mcp/golf-scanner"
   },
@@ -69,7 +69,7 @@
     "name": "mcp-sec-audit",
     "developer": "Open Source",
     "category": "Auditor",
-    "stage": "startup",
+    "stage": "body",
     "description": "Research artifact for detecting security vulnerabilities in Model Context Protocol (MCP) servers",
     "url": "https://github.com/nyit-vancouver/mcp-sec-audit"
   },
@@ -97,7 +97,7 @@
     "name": "Unified Context Layer (UCL)",
     "developer": "Open Source",
     "category": "Gateway",
-    "stage": "startup",
+    "stage": "body",
     "description": "Emerging open context/MCP gateway layer for agentic systems; useful as your local setup grows past a single client.",
     "url": "https://modelcontextprotocol.io"
   }
