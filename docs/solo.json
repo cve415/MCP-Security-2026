@@ -27,7 +27,7 @@
     "name": "mcp-use",
     "developer": "mcp-use",
     "category": "Infrastructure",
-    "stage": "startup",
+    "stage": "body",
     "description": "Open-source infrastructure for secure MCP deployment: OAuth, multi-user auth, and context boundaries. Your auth layer for anything you ship.",
     "url": "https://github.com/mcp-use/mcp-use"
   },
