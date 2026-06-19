@@ -4,7 +4,7 @@
     "developer": "Agentic AI Foundation",
     "category": "Protocol",
     "stage": "body",
-    "description": "The spec itself, now neutrally governed under the AAIF. Follow the Registry and the 2026 roadmap (Server Cards, conformance tests, SSO-based auth); it's the source of truth everything else builds on.",
+    "description": "The Model Context Protocol (MCP) is an open source project that welcomes contributions from the community",
     "url": "https://modelcontextprotocol.io"
   },
   {
@@ -12,7 +12,7 @@
     "developer": "Invariant Labs (Snyk)",
     "category": "Scanner",
     "stage": "startup",
-    "description": "The single highest-ROI tool here. Detects tool poisoning, rug pulls (hash-based tool pinning), and prompt injection across Claude Desktop, Cursor, Claude Code, Gemini CLI, and Windsurf. uvx mcp-scan@latest, no config, free.",
+    "description": "Detects tool poisoning, rug pulls (hash-based tool pinning), and prompt injection across Claude Desktop, Cursor, Claude Code, Gemini CLI, and Windsurf. uvx mcp-scan@latest, no config, free.",
     "url": "https://github.com/invariantlabs-ai/mcp-scan"
   },
   {
@@ -20,7 +20,7 @@
     "developer": "OWASP",
     "category": "Framework",
     "stage": "body",
-    "description": "The free checklist you build against: the MCP Top 10 plus the Top 10 for Agentic Applications (2026). If you read one thing on this list, read this.",
+    "description": " Global, open-source initiative dedicated to identifying, mitigating, and documenting security and safety risks associated with generative AI technologies, including large language models (LLMs), agentic AI systems, and AI-driven applications",
     "url": "https://genai.owasp.org/initiatives/agentic-security-initiative/"
   },
   {
@@ -36,7 +36,7 @@
     "developer": "IBM",
     "category": "Gateway",
     "stage": "established",
-    "description": "Open-source, self-hostable MCP gateway. The free alternative to the paid enterprise gateways — worth standing up once you run more than one server.",
+    "description": "Open-source, self-hostable MCP gateway",
     "url": "https://github.com/IBM/mcp-context-forge"
   },
   {
@@ -62,7 +62,7 @@
     "developer": "Open Source",
     "category": "Scanner",
     "stage": "startup",
-    "description": "Open-source Go CLI; discovers MCP server configs across ~7 IDEs and runs ~20 checks against local setups. Workstation hygiene.",
+    "description": "Discover and audit MCP servers across your IDEs.",
     "url": "https://github.com/golf-mcp/golf-scanner"
   },
   {
@@ -70,7 +70,7 @@
     "developer": "Open Source",
     "category": "Auditor",
     "stage": "startup",
-    "description": "Static + dynamic analysis focused on over-privileged tool capabilities (scored 100% on the MCPTox benchmark). Run it before you publish a server.",
+    "description": "Research artifact for detecting security vulnerabilities in Model Context Protocol (MCP) servers",
     "url": "https://github.com/nyit-vancouver/mcp-sec-audit"
   },
   {
