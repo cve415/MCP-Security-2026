@@ -53,4 +53,14 @@ To suggest additions, corrections, or removals, [open an issue](https://github.c
 
 ---
 
-**By Christopher Velasco, Agent Architect**
+**By Christopher Velasco — technical recruiting, startup talent partnerships, and developer ecosystem research**
+
+## Research
+
+The buildless GitHub Pages site is published from `main:/docs` at `https://cve415.github.io/MCP-Security-2026/`. Research lives at `/research/`, with an `index.html` directory per stable article slug. Relative links preserve the project base path. No build or framework is required.
+
+- First article: `docs/research/five-companies-in-ai-code-security/index.html`
+- Article styles: `docs/research/research.css`
+- Selected directory records use stable `id` fields and an optional `research` slug. Deep links use `?audience=enterprise#semgrep` (or `solo`). One company record per audience dataset; product scopes can differ between audiences.
+- Research documentation review: October 9, 2026. This does not redate or reverify the rest of the directory.
+- Validate with `python3 scripts/check_site.py`. Serve `docs/` with any static HTTP server for local review. No deployment is performed by the check.

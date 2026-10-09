@@ -9,15 +9,16 @@
 <meta property="og:description" content="This open index maps the emerging MCP & Agentic Security landscape—categorized by high-velocity developer tooling and strict enterprise governance frameworks.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cve415.github.io/MCP-Security-2026/">
-<meta property="og:image" content="https://cve415.github.io/MCP-Security/social-card.svg">
+<meta property="og:image" content="https://cve415.github.io/MCP-Security-2026/social-card.svg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MCP & Agentic Security Directory (2026)">
 <meta name="twitter:description" content="Open index mapping MCP security landscape—developer tooling &amp; enterprise control planes.">
-<meta name="twitter:image" content="https://cve415.github.io/MCP-Security/social-card.svg">
+<meta name="twitter:image" content="https://cve415.github.io/MCP-Security-2026/social-card.svg">
 
+<link rel="canonical" href="https://cve415.github.io/MCP-Security-2026/">
 <style>
 :root {
     --bg: #f8f9fa;
@@ -139,7 +140,7 @@ nav {
 
 .directory-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1-fraction));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
     gap: 1.5rem;
 }
 
@@ -179,13 +180,16 @@ nav {
 .card-link:hover { text-decoration: underline; }
 
 .no-results { display: none; text-align: center; padding: 3rem; color: var(--text-secondary); }
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #276c93;outline-offset:3px}.skip{position:absolute;top:-100px;left:1rem;background:white;padding:1rem;z-index:200}.skip:focus{top:1rem}nav{gap:1rem;flex-wrap:wrap}.site-links{display:flex;gap:1.5rem}.site-links a{color:inherit;font-size:.95rem;text-underline-offset:4px}.page-tab{font-family:inherit;background:transparent;border:0;border-bottom:2px solid transparent;text-align:left}.card{scroll-margin-top:10rem}.card:target{outline:2px solid #111;outline-offset:4px}.research-link{display:block;color:inherit;font-size:.85rem;margin-top:1rem}.directory-note{max-width:1200px;margin:1rem auto;padding:0 2rem;color:#555;font-size:.9rem}.result-count{font-size:.85rem;color:#555}@media(max-width:600px){header{padding:1rem}.page-tabs{padding:0 1rem;flex-wrap:wrap}.page-tab{padding:.75rem}.hero{padding:0 1rem}.hero h1{font-size:2.2rem}.grid-section,.controls-container{padding:0 1rem}.controls-container{flex-wrap:wrap}.search-bar{min-width:0;width:100%}.logo{font-size:1rem}}
 </style>
 </head>
 <body>
+<a class="skip" href="#directory">Skip to directory</a>
 
 <header>
-    <nav>
+    <nav aria-label="Main navigation">
         <div class="logo">MCP Security & Governance <span>// Directory</span></div>
+    <div class="site-links"><a href="./" aria-current="page">Directory</a><a href="research/">Research</a></div>
     </nav>
 </header>
 
@@ -205,17 +209,20 @@ nav {
     </div>
 </div>
 
-<div class="page-tabs">
-    <div class="page-tab active" onclick="switchTab('solo')">For Developers</div>
-    <div class="page-tab" onclick="switchTab('enterprise')">Enterprise Platforms</div>
-    <div class="page-tab" onclick="switchTab('governance')">Standards & Governance</div>
+<div class="page-tabs" role="group" aria-label="Directory audience">
+    <button type="button" class="page-tab active" data-audience="solo" aria-pressed="true" onclick="switchTab('solo')">For Developers</button>
+    <button type="button" class="page-tab" data-audience="enterprise" aria-pressed="false" onclick="switchTab('enterprise')">Enterprise Platforms</button>
+    <button type="button" class="page-tab" data-audience="governance" aria-pressed="false" onclick="switchTab('governance')">Standards & Governance</button>
 </div>
 
+<p class="directory-note">Research companion: <a href="research/five-companies-in-ai-code-security/">Five Companies in AI Code Security</a>. Application and credential security entries complement the MCP-focused reference.</p>
 <div class="controls-container">
-    <input type="text" class="search-bar" id="searchInput" placeholder="Search entries, categories, descriptions..." oninput="handleSearch()">
+    <input type="text" class="search-bar" id="searchInput" aria-label="Search the selected directory audience" placeholder="Search entries, categories, descriptions..." oninput="handleSearch()">
+<span class="result-count" id="resultCount" role="status"></span>
 </div>
 
-<main class="grid-section">
+<main class="grid-section" id="directory">
+    <noscript>This directory requires JavaScript for search and filtering. Browse the <a href="solo.json">developer</a>, <a href="enterprise.json">enterprise</a>, and <a href="governance.json">governance</a> datasets directly, or visit <a href="research/">Research</a>.</noscript>
     <div class="directory-grid" id="directoryGrid">
         </div>
     <div class="no-results" id="noResults">No records match your query.</div>
@@ -250,19 +257,37 @@ async function loadData() {
         dataStorage.solo = s;
         dataStorage.enterprise = e;
         dataStorage.governance = g;
-        renderGrid();
+        restoreLocation();
     } catch (err) {
         document.getElementById('directoryGrid').innerHTML = '<p>Error loading directory payloads.</p>';
     }
 }
 
 function switchTab(tabName) {
-    activeTab = tabName;
-    document.querySelectorAll('.page-tab').forEach(el => el.classList.remove('active'));
-    event.currentTarget.classList.add('active');
+    activeTab = Object.hasOwn(dataStorage, tabName) ? tabName : 'solo';
+    document.querySelectorAll('.page-tab').forEach(el => {
+        const selected = el.dataset.audience === activeTab;
+        el.classList.toggle('active', selected);
+        el.setAttribute('aria-pressed', String(selected));
+    });
     document.getElementById('searchInput').value = '';
+    const url = new URL(location.href);
+    url.searchParams.set('audience', activeTab);
+    url.hash = '';
+    history.replaceState(null, '', url);
     renderGrid();
 }
+function restoreLocation() {
+    const url = new URL(location.href);
+    const hash = url.hash.slice(1);
+    switchTab(url.searchParams.get('audience') || 'solo');
+    if (hash) {
+        url.searchParams.set('audience', activeTab);
+        history.replaceState(null, '', url);
+        requestAnimationFrame(() => document.getElementById(hash)?.scrollIntoView());
+    }
+}
+window.addEventListener('popstate', restoreLocation);
 
 function renderGrid(filterText = '') {
     const grid = document.getElementById('directoryGrid');
@@ -274,6 +299,7 @@ function renderGrid(filterText = '') {
         return searchPool.includes(filterText.toLowerCase());
     });
 
+    document.getElementById('resultCount').textContent = `${items.length} entries`;
     if (items.length === 0) {
         noResults.style.display = 'block';
         return;
@@ -283,10 +309,11 @@ function renderGrid(filterText = '') {
     items.forEach(item => {
         const card = document.createElement('div');
         card.className = 'card';
+        if (item.id) card.id = item.id;
 
         const subtitle = item.developer || item.category || item.type || 'Standard';
         const metaTag = item.category || item.type || 'Framework';
-        const linkHTML = item.url ? `<a class="card-link" href="${item.url}" target="_blank">View ↗</a>` : '';
+        const linkHTML = item.url ? `<a class="card-link" href="${item.url}" target="_blank" rel="noopener noreferrer">View ↗</a>` : '';
 
         let stageBadgeHTML = '';
         if (item.stage) {
@@ -316,6 +343,13 @@ function renderGrid(filterText = '') {
                 ${linkHTML}
             </div>
         `;
+        if (item.research) {
+            const researchLink = document.createElement('a');
+            researchLink.className = 'research-link';
+            researchLink.href = `research/${item.research}/#${item.id === 'mcp-scan' ? 'snyk' : item.id}`;
+            researchLink.textContent = 'Read the research →';
+            card.appendChild(researchLink);
+        }
         grid.appendChild(card);
     });
 }

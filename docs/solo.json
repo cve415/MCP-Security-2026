@@ -13,7 +13,9 @@
     "category": "Scanner",
     "stage": "startup",
     "description": "Detects tool poisoning, rug pulls (hash-based tool pinning), and prompt injection across Claude Desktop, Cursor, Claude Code, Gemini CLI, and Windsurf. uvx mcp-scan@latest, no config, free.",
-    "url": "https://github.com/invariantlabs-ai/mcp-scan"
+    "url": "https://github.com/invariantlabs-ai/mcp-scan",
+    "id": "mcp-scan",
+    "research": "five-companies-in-ai-code-security"
   },
   {
     "name": "OWASP GenAI Security Project",
@@ -118,5 +120,23 @@
     "stage": "startup",
     "description": "Open-source Python framework for building custom, secure MCP servers. Natively handles user-delegated OAuth, token refresh, and encrypted secret injection, so developers never hardcode keys or expose tokens to the client/LLM.",
     "url": "https://github.com/ArcadeAI"
+  },
+  {
+    "name": "Semgrep developer tools",
+    "id": "semgrep",
+    "developer": "Semgrep",
+    "category": "Code + Agent Security",
+    "description": "Guardian integrates Semgrep scanning into coding-agent workflows with MCP, hooks and skills. Use alongside broader application and dependency analysis; capabilities depend on the product and configuration.",
+    "url": "https://docs.semgrep.dev/semgrep-guardian/overview",
+    "research": "five-companies-in-ai-code-security"
+  },
+  {
+    "name": "GitGuardian developer tools",
+    "id": "gitguardian",
+    "developer": "GitGuardian",
+    "category": "Credential Security",
+    "description": "ggshield supports pre-commit secret checks. The official GitGuardian MCP server brings scanning and credential incident tools into agent workflows; actions depend on token scopes.",
+    "url": "https://docs.gitguardian.com/ggshield-docs/integrations/git-hooks/pre-commit",
+    "research": "five-companies-in-ai-code-security"
   }
 ]

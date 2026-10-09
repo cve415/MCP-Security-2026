@@ -314,5 +314,50 @@
     "stage": "startup",
     "description": "Runtime guardrail + security gateway enforcing policy on MCP tool calls; app-layer (no network controls).",
     "url": "https://guardion.ai"
+  },
+  {
+    "name": "Semgrep",
+    "id": "semgrep",
+    "developer": "Semgrep",
+    "category": "Application Security",
+    "description": "Semgrep Code, Supply Chain and Autofix connect application findings, dependency context and suggested remediation. Guardian adds coding-agent tools. Coverage and availability vary by product.",
+    "url": "https://docs.semgrep.dev/semgrep-guardian/overview",
+    "research": "five-companies-in-ai-code-security"
+  },
+  {
+    "name": "Snyk",
+    "id": "snyk",
+    "developer": "Snyk",
+    "category": "Application Security",
+    "description": "Snyk Code and Agent Fix connect application findings to generated patches checked by static analysis. Agent Fix focuses on single-file fixes. Distinct from the developer directory’s MCP tool scanner.",
+    "url": "https://docs.snyk.io/scan-fix-and-prevent/scan-with-snyk/snyk-code/manage-code-vulnerabilities/fix-code-vulnerabilities-automatically",
+    "research": "five-companies-in-ai-code-security"
+  },
+  {
+    "name": "Checkmarx",
+    "id": "checkmarx",
+    "developer": "Checkmarx",
+    "category": "Application Security",
+    "description": "Checkmarx One and Developer Assist connect enterprise AppSec with IDE scanning and MCP-based remediation. Lightweight IDE analysis and full project scans have different scopes.",
+    "url": "https://docs.checkmarx.com/en/34965-719261-about-checkmarx-developer-assist.html",
+    "research": "five-companies-in-ai-code-security"
+  },
+  {
+    "name": "Veracode",
+    "id": "veracode",
+    "developer": "Veracode",
+    "category": "Application Security",
+    "description": "Veracode Fix provides AI-assisted remediation for SAST and SCA findings. Fix for SAST uses Pipeline Scan results and source code, with patches reviewed by developers.",
+    "url": "https://docs.veracode.com/r/About_Veracode_Fix",
+    "research": "five-companies-in-ai-code-security"
+  },
+  {
+    "name": "GitGuardian",
+    "id": "gitguardian",
+    "developer": "GitGuardian",
+    "category": "Credential Security",
+    "description": "Credential exposure and incident workflows, with MCP tools for secret scanning, incident management and remediation PRs. Token scopes control available actions; distinct from application vulnerability analysis.",
+    "url": "https://github.com/GitGuardian/ggmcp",
+    "research": "five-companies-in-ai-code-security"
   }
 ]
